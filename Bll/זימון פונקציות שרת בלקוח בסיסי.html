@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>APIהפעלת פונקציות ה</h1>
+    
+    <input type="text" id="word" /> הקש מילה לחיפוש<br />
+    <button onclick="Search()">חפש  </button>
+    <div id="results"></div>
+    <script>
+        function Search() {
+            axios.get("https://localhost:7229/api/Tanach?word=" + document.getElementById("word").innerText).
+                then((result) => {
+                    document.getElementById("results").innerHTML = JSON.stringify(result.data)
+                });
+        }
+
+        function addPlayer() {
+            axios.post("https://localhost:7086/api/Players/AddPlayer", { id: "2222", name: "bbb", stars: "90" }).
+                then((result) => {
+                    document.getElementById("results").innerHTML = JSON.stringify(result.data)
+                });
+        }
+
+        function updatePlayer() {
+            axios.post("localhost:3027/api/players/updatePlayer/${id}", { id: "2", name: "bbb", stars: "90" }).
+                then((result) => {
+                    document.getElementById("results").innerHTML = "נעדכן עוד מעט"
+                });
+        }
+    </script>
+</body>
+</html>

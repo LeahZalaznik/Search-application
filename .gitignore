@@ -1,0 +1,58 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.mdb
+
+## VS and user-specific
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## ASP.NET / Web API specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.log
+*.vspscc
+*.vssscc
+
+## DotNet tools/packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.dbmdl
+
+## Entity Framework
+Migrations/
+
+## Rider (JetBrains)
+.idea/
+*.sln.iml
+
+## VS Code
+.vscode/
+
+## Temporary / backup files
+*~
+*.bak
+*.tmp
+
+## Publish
+publish/
+wwwroot/
+dist/
+node_modules/
+.env
+.env.*
+
+## Other
+Thumbs.db
+ehthumbs.db
+Desktop.ini
